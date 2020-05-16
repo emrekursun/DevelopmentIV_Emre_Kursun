@@ -62,8 +62,6 @@ img {
   text-align: center;
 }
 
-
-
 h2{
   font-family: Montserrat,sans-serif;
   font-weight: 800;
@@ -121,5 +119,44 @@ button.active {
 }
 */
 ul li{
-  list-style-type: none;
+ /* list-style-type: none;*/
 }
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #e8edf4;
+  color: white;
+  font-weight: 700;
+  font-family: Montserrat,sans-serif;
+}
+
+.play {
+  width: 10px; 
+  height: 40px;
+  min-height: 40px;
+  min-width: 40px;  
+}
+
+.category, .name, .excerpt{
+  font-family: Montserrat,sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+.thumbnail{
+  width: 100%;
+  height: 40%; 
+  opacity: 0.8;
+  object-fit: cover;
+}
+
+hr{
+  border: none;
+    height: 3px;
+    /* Set the hr color */
+    color: #FC2D75; /* old IE */
+    background-color: #FC2D75; /* Modern Browsers */
+}
+
+
