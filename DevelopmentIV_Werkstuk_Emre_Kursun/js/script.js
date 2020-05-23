@@ -13,13 +13,13 @@ $(function () {
         })
         .then(function (data) {
 
-            console.log(data);
+            console.log(data); 
 
 
             // Add data to html
             /*
-                        let entries = $(`<p class='data'>` + JSON.stringify(data.items) + `<strong><br> </strong></p>`).appendTo(div);
-                        JSON.stringify(div);
+            let entries = $(`<p class='data'>` + JSON.stringify(data.items) + `<strong><br> </strong></p>`).appendTo(div);
+            JSON.stringify(div);
             */
             // Hier nemen we de lengte van de json file.
             var totalItems = Object.keys(data.items).length;
@@ -42,7 +42,6 @@ $(function () {
                     $(div).addClass('volwassenen');
                 }
 
-            
                 //  let created_by = $(`<p class='data'>` + JSON.stringify(data.items[i]["created-by"]) + `<strong><br> </strong></p>`).appendTo(div);
 
                 // Thumbnail
@@ -57,7 +56,7 @@ $(function () {
                 let key_takeaways = $(`<p class='keyTakeaways'>` + (data.items[i]["key-takeaways"]) + `</p>`).appendTo(div);   
                 // Voeg een class toe voor elke specifieke genre
                 let contains = data.items[i]["key-takeaways"];
-                console.log(contains);
+                
 
                 if (contains.indexOf("concert") >= 0) {
                     $(div).addClass('concert');
@@ -140,15 +139,12 @@ $(function () {
                 }
                 
                 
-                
-
-
                 // Hier append ik alle data in een div met als ID '#container'
                 $('#container').append(div);
 
                 // VOLWASSENEN BUTTON FILTERING
                 $('.volwassenenBtn').click(function (e) {
-                    e.preventDefault();
+                    e.preventDefault(); 
 
                     // als enkel deze actief is
                     if ($('.volwassenenBtn').hasClass('active')) {
@@ -225,11 +221,7 @@ $(function () {
                             $(".theater").show();
                             
                         }
-
-                        // Als beide niet actief zijn
-                        if (!$('.volwassenenBtn').hasClass('active') && !$('.familieBtn').hasClass('active') && !$('.dansBtn').hasClass('active')) {
-                          
-                        }
+                        removeFilters(); 
                     }); 
                     
                     $('.theaterBtn').click(function(e){
@@ -256,11 +248,7 @@ $(function () {
                             $(".theater").show();
                            
                         }
-
-                        // Als beide niet actief zijn
-                        if (!$('.volwassenenBtn').hasClass('active') && !$('.familieBtn').hasClass('active') && !$('.theaterBtn').hasClass('active')) {
-                            
-                        }
+                        removeFilters(); 
                     });
 
                     $('.concertBtn').click(function(e){
@@ -287,11 +275,7 @@ $(function () {
                             $(".theater").show();
                             $(".concert").show();
                         }
-
-                        // Als beide niet actief zijn
-                        if (!$('.volwassenenBtn').hasClass('active') && !$('.familieBtn').hasClass('active') && !$('.concertBtn').hasClass('active')) {
-                            
-                        }
+                        removeFilters(); 
                     }); 
 
                     $('.multiBtn').click(function(e){
@@ -319,12 +303,7 @@ $(function () {
                             $(".concert").show();
                             $(".multidisciplinair").show();
                         }
-
-
-                        // Als beide niet actief zijn
-                        if (!$('.volwassenenBtn').hasClass('active') && !$('.familieBtn').hasClass('active') && !$('.multiBtn').hasClass('active')) {
-                           
-                        }
+                        removeFilters(); 
                     }); 
                     
                     $('.literatuurBtn').click(function(e){
@@ -353,11 +332,7 @@ $(function () {
                             $(".multidisciplinair").show();
                             $(".literatuur").show();
                         }
-
-                        // Als beide niet actief zijn
-                        if (!$('.volwassenenBtn').hasClass('active') && !$('.familieBtn').hasClass('active') && !$('.literatuurBtn').hasClass('active')) {
-                           
-                        }
+                        removeFilters(); 
                     }); 
 
                     $('.comedyBtn').click(function(e){
@@ -387,11 +362,7 @@ $(function () {
                             $(".literatuur").show();
                             $(".comedy").show();
                         }
-
-                        // Als beide niet actief zijn
-                        if (!$('.volwassenenBtn').hasClass('active') && !$('.familieBtn').hasClass('active') && !$('.comedyBtn').hasClass('active')) {
-                           
-                        }
+                        removeFilters(); 
                     }); 
 
                     $('.operaBtn').click(function(e){
@@ -422,10 +393,7 @@ $(function () {
                             $(".comedy").show();
                             $(".opera").show();
                         }
-                        // Als beide niet actief zijn
-                        if (!$('.volwassenenBtn').hasClass('active') && !$('.familieBtn').hasClass('active') && !$('.operaBtn').hasClass('active')) {
-                           
-                        } 
+                        removeFilters(); 
                     });
                     
                     $('.circusBtn').click(function(e){
@@ -455,16 +423,17 @@ $(function () {
                             $(".literatuur").show();
                             $(".comedy").show();
                             $(".opera").show();
-                            $(".circus").show();
+                            $(".circus").show(); 
                         }
-
-                        // Als beide niet actief zijn
-                        if (!$('.volwassenenBtn').hasClass('active') && !$('.familieBtn').hasClass('active') && !$('.circusBtn').hasClass('active')) {
-                           
-                        }
+                        removeFilters(); 
                     }); 
 
-
+                    function removeFilters() {
+                        if (!$('button').hasClass('active')){
+                        $(".volwassenen").show();
+                        $(".familie").show();
+                        }
+                    }
             }
-        });
+        }); 
 })
