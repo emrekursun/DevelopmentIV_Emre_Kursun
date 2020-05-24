@@ -1,73 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-    <link rel="shortcut icon" type="image/png" href="images/podiumaanhuis.png"/>
-    <title>Podiumaanhuis</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="images/podiumaanhuis.png" />
+  <title>Podiumaanhuis</title>
 </head>
+
 <body>
- 
-    <ul class="topnav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">Video's</a></li> 
-        <li><a href="#contact">Over</a></li>
-        <li class="right"><a href="#about">Podium aan huis</a></li>
-      </ul>
-      <div class="content">
-      <img src="https://uploads-ssl.webflow.com/5e74d1a991dea41c1dcdc1e7/5ea155fec9fa38ac66d1a5b9_Zonzo_Slumberland%20(c)%20Dries%20Segers_Banner.jpg">
-    </div>
-    
-    <div class="header">
+
+  <ul class="topnav">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">Video's</a></li>
+    <li><a href="#contact">Over</a></li>
+    <li class="right"><a href="#about">Podium aan huis</a></li>
+  </ul>
+  <div class="content">
+    <img class="banner"
+      src="https://uploads-ssl.webflow.com/5e74d1a991dea41c1dcdc1e7/5ea155fec9fa38ac66d1a5b9_Zonzo_Slumberland%20(c)%20Dries%20Segers_Banner.jpg">
+  </div>
+
+  <div class="header">
     <h2 class="intro">Haal voorstellingen naar je huiskamer </h2>
-    <p class="detail">Bekijk gratis opnames van straffe podiumvoorstellingen voor jong en oud. Elke dag komen er nieuwe bij. Via Podium Aan Huis bundelen gezelschappen, kunst- en cultuurhuizen virtueel de krachten om jou te blijven ontroeren en ontspannen. Door de coronacrisis is de magie van de live beleving even onbereikbaar. Geen nood, want als de zalen moeten sluiten, dan komt de voorstelling gewoon naar je toe. Veel kijkplezier!</p>
-    </div>
+    <p class="detail">Bekijk gratis opnames van straffe podiumvoorstellingen voor jong en oud. Elke dag komen er nieuwe
+      bij. Via Podium Aan Huis bundelen gezelschappen, kunst- en cultuurhuizen virtueel de krachten om jou te blijven
+      ontroeren en ontspannen. Door de coronacrisis is de magie van de live beleving even onbereikbaar. Geen nood, want
+      als de zalen moeten sluiten, dan komt de voorstelling gewoon naar je toe. Veel kijkplezier!</p>
+  </div>
 
-    <div class="filter__container" style="padding-left: 25px; padding-right: 25px;"><h6>Doelgroep</h6> <div style="display: flex; flex-direction: row; justify-content: start; width: 100%;"><button class="volwassenenBtn" style="margin-right: 10px; font-weight: 400; margin-bottom: 0px;">
+  <input type="text" id="searchFilter" name="zoeken" placeholder="Zoek naar een voorstelling">
+  <div id="container2"></div>
+  <div class="filter__container" style="padding-left: 25px; padding-right: 25px;">
+    <h6>Doelgroep</h6>
+    <div style="display: flex; flex-direction: row; justify-content: start; width: 100%;"><button class="volwassenenBtn"
+        style="margin-right: 10px; font-weight: 400; margin-bottom: 0px;">
         volwassenen
-        </button><button class="familieBtn"  style="margin-right: 10px; font-weight: 400; margin-bottom: 0px;">
+      </button><button class="familieBtn" style="margin-right: 10px; font-weight: 400; margin-bottom: 0px;">
         familie
-        </button></div> <h6>Genre</h6> <div style="display: flex; flex-flow: row wrap; justify-content: start; width: 100%;"></div><button class="dansBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
-        Dans
-       </button>
-       <button class="theaterBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
-        Theater
-       </button>
-       <button class="muziekBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
-        Muziektheater
-       </button>
-       <button class="concertBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
-        Concert
-       </button> 
-       <button class="multiBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
-        Multidisciplinair
-       </button>
-       <button class="literatuurBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
-        Literatuur 
-       </button>
-       <button class="comedyBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
-        Comedy
-       </button>
-       <button class="figurenBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
-        Figurentheater
-       </button>
-       <button class="operaBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
-        Opera
-       </button>
-       <button class="circusBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
-        Circus
-       </button>
+      </button></div>
+    <h6>Genre</h6>
+    <div style="display: flex; flex-flow: row wrap; justify-content: start; width: 100%;"></div><button class="dansBtn"
+      style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
+      Dans
+    </button>
+    <button class="theaterBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
+      Theater
+    </button>
+    <button class="muziekBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
+      Muziektheater
+    </button>
+    <button class="concertBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
+      Concert
+    </button>
+    <button class="multiBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
+      Multidisciplinair
+    </button>
+    <button class="literatuurBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
+      Literatuur
+    </button>
+    <button class="comedyBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
+      Comedy
+    </button>
+    <button class="figurenBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
+      Figurentheater
+    </button>
+    <button class="operaBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
+      Opera
+    </button>
+    <button class="circusBtn" style="margin-right: 10px; margin-bottom: 10px; font-weight: 400;">
+      Circus
+    </button> 
+  </div>
+
+  <div id="container"></div>
+
+  
+
+  <div class="section-3">
+    <div class="container">
+      <div class="w-row">
+        <div class="w-col w-col-6">
+          <div class="w-richtext">
+            <p><a href="/pages-gebruiksvoorwaarden" class="">Gebruiksvoorwaarden / Privacyverklaring</a></p>
+          </div> 
+        </div>
+        <div class="w-col w-col-6">
+          <div class="text-block-3">Deze website is mogelijk gemaakt door</div>
+          <div class="columns-2 w-row">
+            <div class="column-3 w-col w-col-6 w-col-medium-6 w-col-small-6 w-col-tiny-tiny-stack"><a
+                href="https://www.cultuurconnect.be/" target="_blank" class="w-inline-block"><img class="podium"
+                  src="https://podiumaanhuis.be/assets/static/logocc.c895116.20fbabbf0002538168ada190d1343188.png
+                  " width="102"
+                  data-src="https://podiumaanhuis.be/assets/static/logocc.c895116.20fbabbf0002538168ada190d1343188.png"
+                  data-srcset="https://podiumaanhuis.be/assets/static/logocc.c895116.20fbabbf0002538168ada190d1343188.png 102w"
+                  data-sizes="(max-width: 102px) 100vw, 102px" class="g-image g-image--lazy g-image--loaded"
+                  srcset="https://podiumaanhuis.be/assets/static/logocc.c895116.20fbabbf0002538168ada190d1343188.png 102w"
+                  sizes="(max-width: 102px) 100vw, 102px"><noscript><img
+                    src="https://podiumaanhuis.be/assets/static/logocc.c895116.20fbabbf0002538168ada190d1343188.png"
+                    class="g-image g-image--loaded" width="102"></noscript></a></div>
+            <div class="column-4 w-col w-col-4 w-col-medium- w-col-small-4 w-col-tiny-tiny-stack"><img class="vlaanderen"
+                src="https://podiumaanhuis.be/assets/static/logovlaanderen.72fdfb6.8b90629eae40c9287513bb025819937c.png" width="175"
+                data-src="https://podiumaanhuis.be/assets/static/logovlaanderen.72fdfb6.8b90629eae40c9287513bb025819937c.png"
+                data-srcset="https://podiumaanhuis.be/assets/static/logovlaanderen.72fdfb6.8b90629eae40c9287513bb025819937c.png 175w"
+                data-sizes="(max-width: 175px) 100vw, 175px" class="g-image g-image--lazy g-image--loaded"
+                srcset="https://podiumaanhuis.be/assets/static/logovlaanderen.72fdfb6.8b90629eae40c9287513bb025819937c.png 175w"
+                sizes="(max-width: 175px) 100vw, 175px"><noscript><img
+                  src="https://podiumaanhuis.be/assets/static/logovlaanderen.72fdfb6.8b90629eae40c9287513bb025819937c.png"
+                  class="g-image g-image--loaded" width="175"></noscript></div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div id="container"></div>
-
-    <footer>
-        <p>Podiumaanhuis<br>
-            <a href="#">Gebruiksvoorwaarden/Privacyverklaring</a></p>
-    </footer>
+  </div>
 </body>
+
 </html>
